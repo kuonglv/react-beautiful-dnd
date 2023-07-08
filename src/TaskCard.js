@@ -11,14 +11,15 @@ const TaskInformation = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 15px;
+  padding: 0 25px;
   min-height: 106px;
   border-radius: 5px;
   max-width: 311px;
   /* background: ${({ isDragging }) =>
     isDragging ? 'rgba(255, 59, 59, 0.15)' : 'white'}; */
   background: white;
-  margin-top: 15px;
+  margin: 15px 10px;
+  border: 2px dashed #CCC;
 
   .secondary-details {
     display: flex;
@@ -52,14 +53,9 @@ const TaskCard = ({ item, index }) => {
         >
           <TaskInformation>
             <p>{item.Task}</p>
-            <div className="secondary-details">
+            <div className="secondary-details" style={{ minWidth: '50px'}}>
               <p>
-                <span>
-                  {new Date(item.Due_Date).toLocaleDateString('en-us', {
-                    month: 'short',
-                    day: '2-digit',
-                  })}
-                </span>
+                
               </p>
             </div>
           </TaskInformation>
